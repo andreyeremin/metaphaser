@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this software and the version used in your analysis."
+title: metaphaser
+type: software
+authors:
+  - family-names: Eremin
+    given-names: Andrey
+version: 0.2.0rc2
+date-released: 2026-11-17
+repository-code: "https://github.com/andreyeremin/metaphaser"
+url: "https://github.com/andreyeremin/metaphaser"
+license: MIT
+abstract: "Read-level genomic junction classification and separate DNA-modification comparisons from nanopore modBAM and assembly FASTA inputs."

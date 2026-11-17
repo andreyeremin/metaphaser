@@ -1,0 +1,289 @@
+{
+  "interval": [
+    6000,
+    6800
+  ],
+  "length": 800,
+  "reads": [
+    {
+      "read_id": "demo_L_forward_00",
+      "state": "L",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_L_forward_01",
+      "state": "L",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_L_forward_02",
+      "state": "L",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_L_forward_03",
+      "state": "L",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_L_forward_04",
+      "state": "L",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_L_forward_05",
+      "state": "L",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_L_reverse_00",
+      "state": "L",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_L_reverse_01",
+      "state": "L",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_L_reverse_02",
+      "state": "L",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_L_reverse_03",
+      "state": "L",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_L_reverse_04",
+      "state": "L",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_L_reverse_05",
+      "state": "L",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_R_forward_00",
+      "state": "R",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_R_forward_01",
+      "state": "R",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_R_forward_02",
+      "state": "R",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_R_forward_03",
+      "state": "R",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_R_forward_04",
+      "state": "R",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_R_forward_05",
+      "state": "R",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_R_reverse_00",
+      "state": "R",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_R_reverse_01",
+      "state": "R",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_R_reverse_02",
+      "state": "R",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_R_reverse_03",
+      "state": "R",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_R_reverse_04",
+      "state": "R",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_R_reverse_05",
+      "state": "R",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_P_forward_00",
+      "state": "P",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_P_forward_01",
+      "state": "P",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_P_forward_02",
+      "state": "P",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_P_forward_03",
+      "state": "P",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_P_forward_04",
+      "state": "P",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_P_forward_05",
+      "state": "P",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_P_reverse_00",
+      "state": "P",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_P_reverse_01",
+      "state": "P",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_P_reverse_02",
+      "state": "P",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_P_reverse_03",
+      "state": "P",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_P_reverse_04",
+      "state": "P",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_P_reverse_05",
+      "state": "P",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_B_forward_00",
+      "state": "B",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_B_forward_01",
+      "state": "B",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_B_forward_02",
+      "state": "B",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_B_forward_03",
+      "state": "B",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_B_forward_04",
+      "state": "B",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_B_forward_05",
+      "state": "B",
+      "orientation": "+"
+    },
+    {
+      "read_id": "demo_B_reverse_00",
+      "state": "B",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_B_reverse_01",
+      "state": "B",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_B_reverse_02",
+      "state": "B",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_B_reverse_03",
+      "state": "B",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_B_reverse_04",
+      "state": "B",
+      "orientation": "-"
+    },
+    {
+      "read_id": "demo_B_reverse_05",
+      "state": "B",
+      "orientation": "-"
+    },
+    {
+      "read_id": "ordinary_00",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_01",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_02",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_03",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_04",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_05",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_06",
+      "state": "ordinary",
+      "orientation": "+"
+    },
+    {
+      "read_id": "ordinary_07",
+      "state": "ordinary",
+      "orientation": "+"
+    }
+  ]
+}

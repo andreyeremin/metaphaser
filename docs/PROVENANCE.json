@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0rc2",
+  "date": "2026-11-17",
+  "repository": "https://github.com/andreyeremin/metaphaser",
+  "license": "MIT",
+  "statistical_algorithm_version": "1.0.0",
+  "analysis_modules_unchanged_from_validated_rc2": true,
+  "source_sha256": {
+    "__init__.py": "a62c1fb1ef81537e9f3128874bcf224f675e3b7979dd4c66c60b1aa856ca1816",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "_vendor/__init__.py": "6318abb59f239017bb1d40675183b024ff7a0dc558990ffb02de04ac8fff1b7c",
+    "_vendor/junctions_v17.py": "ecb6608dfcebc337da087c6951eeb730f3ac3b132fa7134e785efb863425f862",
+    "cli.py": "9e552ff603de405ce5da0e284a89871624e482441b8706b58074de7118eb7237",
+    "config.py": "04f78c55d76f09cf16c8cc539bff67ff609a1ad5314fe555b8ee8718813f6da3",
+    "demo.py": "18f5241d22733736050f7d0d97123cf2ad69a5009e6992f4527a32a7b568813a",
+    "discovery.py": "0ef734d5caf76e23f689107b10bd3ebb7fc81eeab975ddff0c83ed80752a5c0e",
+    "io.py": "3d014a804298db329bfe8969e1dd9455fb698deddb1a8da35c30aa78e0d5d40c",
+    "logging.py": "2f1fe15df78ad28b69d03039102ebcace89231d629be574cccb45d788348a854",
+    "modifications.py": "402ee5287223c7c927f812dca310bd00d89ee292291e030719381fe96307588f",
+    "multiple_testing.py": "3d7031aa9559f0d4a79a684a9f84b8706a87bd5b5b2d1a83526be76b2ce338c2",
+    "pipeline.py": "1ba2261474ddc1a50192c1a1bc595a8dca79d5cd2ac89e1c313b7363c94311b7",
+    "reporting.py": "107b7c334ba692038b945b43e9222b4929f06636abdcbf81e07932d962d40451",
+    "stats.py": "5bfb5e21d82658137b90060052a80702775a2708cb700c99b919d7666eca5094",
+    "stratified_exact.py": "755fbe6b47a27acbf88a6427233bae5f54bec28f5dd9af4d6c3a9c1554fe3511",
+    "worker.py": "44bb9a079234ba0a2f60e25a28a326217eec60eed8f57cd3fb32ad32a330e3cc"
+  }
+}
