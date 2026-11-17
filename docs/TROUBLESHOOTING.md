@@ -11,6 +11,33 @@ python -m metaphaser --version
 
 Use `python -m pip` from that same environment when installing.
 
+## Install on a Linux server without internet access
+
+The target still needs Python 3.12 and minimap2 2.30. On an internet-connected
+machine, download the dependencies for Linux x86-64 and CPython 3.12:
+
+```bash
+python3.12 -m pip download --only-binary=:all: \
+  --platform manylinux_2_28_x86_64 --platform manylinux2014_x86_64 \
+  --python-version 312 --implementation cp --abi cp312 \
+  -r requirements-tested.txt --dest wheelhouse
+```
+
+Copy the source directory and `wheelhouse` to the server. From the copied
+source directory, with minimap2 on `PATH`:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --no-index --find-links wheelhouse -r requirements-tested.txt
+python -m pip install --no-build-isolation --no-deps .
+metaphaser doctor
+```
+
+These wheel selectors target Linux x86-64 with glibc 2.28 or later. They are
+not appropriate for ARM or an older glibc. Keep the Python version and wheel
+platform consistent with the target server.
+
 ## minimap2 is not found or rejects an option
 
 Use the supplied environment file, which selects minimap2 2.30, and run
