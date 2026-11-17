@@ -201,6 +201,10 @@ after installation, with minimap2 on `PATH`:
 python -m pytest -q
 ```
 
+An optional [GitHub Actions workflow](docs/github-actions-example.yml) builds
+minimap2 and runs the tests in a clean Linux runner. To enable it in a fork,
+copy it to `.github/workflows/tests.yml` with an account allowed to edit workflows.
+
 Version 0.2.0rc2 remains a release candidate. The command-line workflow includes
 structural classification, separate-channel modification comparisons and BH
 correction. Read-quality sweeps, motif searches and gene annotation are not

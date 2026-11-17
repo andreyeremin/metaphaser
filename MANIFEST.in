@@ -1,5 +1,5 @@
 include LICENSE README.md README.ru.md requirements-tested.txt environment.yml CHANGELOG.md CITATION.cff
-recursive-include docs *.md *.json
+recursive-include docs *.md *.json *.yml
 recursive-include examples *.py *.json
 recursive-include examples/synthetic *.fasta *.bam
 recursive-include tests *.py
