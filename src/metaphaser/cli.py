@@ -66,6 +66,9 @@ def parser():
     adjust.add_argument("--comparisons", nargs="+", required=True, help="All sample modifications/comparisons.tsv files in the study family")
     adjust.add_argument("--output", required=True, help="New primary comparison TSV with BH q-values")
     adjust.add_argument("--expected-tests", type=positive, help="Fail when the family has a different number of tests")
+    from .partial_coverage import add_arguments
+    partial = commands.add_parser("partial-coverage", help="Exploratory partial-coverage sensitivity from saved site calls")
+    add_arguments(partial)
     return root
 
 
@@ -77,6 +80,9 @@ def main(argv=None):
         if args.command is None:
             root.print_help()
             return 0
+        if args.command == "partial-coverage":
+            from .partial_coverage import run_from_args
+            return run_from_args(args)
         if args.command == "adjust":
             from .multiple_testing import adjust_files
             result = adjust_files(args.comparisons, args.output, args.expected_tests)

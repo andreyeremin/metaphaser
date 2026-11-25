@@ -3,3 +3,6 @@ recursive-include docs *.md *.json *.yml
 recursive-include examples *.py *.json
 recursive-include examples/synthetic *.fasta *.bam
 recursive-include tests *.py
+include study/383/README.md study/383/LICENSE.md study/383/historical_settings.json
+include study/383/counts.tsv study/383/primary_comparisons.tsv study/383/reproduce.py
+include study/383/PROVENANCE.json study/383/verification-20261113.json study/383/verification.json

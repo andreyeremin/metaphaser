@@ -1,0 +1,19 @@
+{
+  "prepared": "2026-11-13",
+  "primary_comparisons": 383,
+  "orientation_strata": 661,
+  "count_profiles": 9793,
+  "ml_cutoff": 205,
+  "orientation_weighting": "equal",
+  "exact_method": "whole-read within-orientation absolute two-sided including ties",
+  "source_sha256": {
+    "primary_comparisons_BH_383.tsv": "1a295082da2fa47a57623bfa6df7c38bb551e6cef8487e681afa9eb7517cba07",
+    "fixed_test_inputs.json.gz": "fc86f12109c3e70b04162d02cd9682e9528c34900ecdd95353e225311a1dead5",
+    "strata.tsv": "b65eb35a607c6c7d118836119c61eba4bcfdb627b981945b6294e330988856b6"
+  },
+  "source_types": {
+    "OI": "237 saved shared-position ML comparisons thresholded at ML >=205",
+    "SETUN": "146 saved per-read integer high-call count comparisons"
+  },
+  "profile_index": "One-based row index within comparison/orientation/state, without cross-comparison molecule linkage"
+}

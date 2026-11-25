@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0rc3 — 2026-11-25
+
+- Add the optional partial-coverage sensitivity command for saved site calls.
+- Report exact orientation-stratified permutation probabilities, coverage diagnostics and explicit untestable outcomes.
+- Include historical study settings and frozen inputs reproducing all 383 primary tests and their BH correction.
+- Preserve primary discovery, assignment and shared-position calculation behaviour.
+
+
 ## 0.2.0rc2 — 2026-11-17
 
 - Separate the preliminary discovery threshold of two distinct reads from the

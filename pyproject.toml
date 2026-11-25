@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "metaphaser"
-version = "0.2.0rc2"
+version = "0.2.0rc3"
 description = "Link metagenomic junction states and nanopore DNA modification calls"
 readme = "README.md"
 requires-python = ">=3.11"

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "primary_comparisons": 383,
+  "count_profiles": 9793,
+  "orientation_strata": 661,
+  "exact_numerators_matched": 383,
+  "exact_denominators_matched": 383,
+  "effects_matched": 383,
+  "p_values_matched": 383,
+  "BH_values_matched": 383,
+  "nominal_below_005": 10,
+  "BH_below_005": 1,
+  "python": "3.12.14",
+  "packages": {
+    "metaphaser": "0.2.0rc3",
+    "numpy": "1.26.4",
+    "scipy": "1.16.1"
+  },
+  "statistical_source_sha256": {
+    "stratified_exact.py": "755fbe6b47a27acbf88a6427233bae5f54bec28f5dd9af4d6c3a9c1554fe3511",
+    "multiple_testing.py": "3d7031aa9559f0d4a79a684a9f84b8706a87bd5b5b2d1a83526be76b2ce338c2"
+  },
+  "input_sha256": {
+    "counts.tsv": "f1b981433d5207a5dbd2828e4182153e687cb69ea1bfa6cea918adb6f70a6c3a",
+    "primary_comparisons.tsv": "6d4f211dbcae678faded33275f850f175982a9f452ab4f7cb82a657c04665f87"
+  }
+}

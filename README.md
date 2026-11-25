@@ -3,7 +3,7 @@
 Classify nanopore reads by genomic junction state and compare DNA modification
 calls between those states using an assembly FASTA and a modBAM.
 
-**Version:** 0.2.0rc2 · **License:** MIT · [Русская инструкция](README.ru.md)
+**Version:** 0.2.0rc3 · **License:** MIT · [Русская инструкция](README.ru.md)
 
 metaphaser finds candidate intervals, constructs synthetic junction references,
 assigns reads to L, R, P and B, and compares **5mC, 5hmC and 6mA separately** at
@@ -18,7 +18,7 @@ minimap2. The commands below use Python 3.12 and minimap2 2.30. Native Windows
 execution is not supported. Use a Linux environment such as WSL2 instead.
 
 ```bash
-git clone --branch v0.2.0rc2 https://github.com/andreyeremin/metaphaser.git
+git clone --branch v0.2.0rc3 https://github.com/andreyeremin/metaphaser.git
 cd metaphaser
 conda env create -f environment.yml
 conda activate metaphaser
@@ -188,13 +188,14 @@ p-values. Use `--expected-tests N` to enforce a pre-established family size.
 
 ## Methods, validation and troubleshooting
 
+- [Historical manuscript settings and reproduction of all 383 primary tests](docs/STUDY_REPRODUCTION.md)
 - [Structural method and thresholds](docs/STRUCTURAL_METHOD.md)
 - [Discovery changes in 0.2.0rc2](docs/DISCOVERY_FIX_20261117.md)
 - [Validation and known limitations](docs/VALIDATION.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 - [Release notes](CHANGELOG.md)
 
-The package includes synthetic input data and 44 regression tests. To run them
+The package includes synthetic input data and regression tests. To run them
 after installation, with minimap2 on `PATH`:
 
 ```bash
@@ -205,7 +206,7 @@ An optional [GitHub Actions workflow](docs/github-actions-example.yml) builds
 minimap2 and runs the tests in a clean Linux runner. To enable it in a fork,
 copy it to `.github/workflows/tests.yml` with an account allowed to edit workflows.
 
-Version 0.2.0rc2 remains a release candidate. The command-line workflow includes
+Version 0.2.0rc3 remains a release candidate. The command-line workflow includes
 structural classification, separate-channel modification comparisons and BH
 correction. Read-quality sweeps, motif searches and gene annotation are not
 implemented as CLI subcommands.
@@ -215,3 +216,21 @@ implemented as CLI subcommands.
 Citation metadata are in [CITATION.cff](CITATION.cff). Cite the version you used.
 The code is distributed under the [MIT license](LICENSE). The bundled example
 contains generated sequences and synthetic modification calls.
+The separate [study-derived tables](study/383/README.md) retain their
+[original data-licensing status](study/383/LICENSE.md); the software licence
+does not assign a new licence to those tables.
+
+## Partial-coverage sensitivity
+
+Use saved calls to examine positions covered by at least six pooled reads per
+orientation. This optional mode reports an exploratory comparison separately
+from the primary shared-position tests. It does not access BAM files or use a GPU.
+
+```bash
+metaphaser partial-coverage \
+  --site-calls RUN/modifications/site_calls.tsv.gz \
+  --sample SAMPLE --locus LOCUS --modification 5mC --contrast P-R \
+  --output partial_coverage.json
+```
+
+Choose a new output file. See [the method, diagnostics and limits](docs/PARTIAL_COVERAGE.md).

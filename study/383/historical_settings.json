@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "scope": "Historical manuscript settings; descriptive record, not a metaphaser --parameters input",
+  "structural_parameters": {
+    "min_length": 200,
+    "max_length": 1000000,
+    "min_anchor": 75,
+    "discovery_identity": 0.85,
+    "max_query_gap": 250,
+    "min_support": 3,
+    "short_max": 2000,
+    "short_tolerance": 25,
+    "long_tolerance": 200,
+    "breakpoint_hypotheses": 5,
+    "external_flank": 2000,
+    "base_window": 250,
+    "mod_window": 1000,
+    "paired_fraction": 0.9,
+    "accept_identity": 0.95,
+    "max_core_indel": 10,
+    "min_edit_margin": 3,
+    "edit_margin_fraction": 0.02,
+    "ml_cutoff": 205
+  },
+  "historical_candidate_generation": {
+    "minimum_distinct_discovery_reads": 3,
+    "maximum_observed_boundary_pairs": 5,
+    "positive_gap_boundary_refinement": false
+  },
+  "rc2_candidate_generation": {
+    "minimum_distinct_discovery_reads_default": 2,
+    "maximum_observed_boundary_pairs": 5,
+    "maximum_additional_refined_boundary_pairs": 5
+  },
+  "minimap2_arguments": [
+    "-a",
+    "-x",
+    "map-ont",
+    "-k",
+    "11",
+    "-w",
+    "5",
+    "-m",
+    "20",
+    "-s",
+    "40",
+    "-n",
+    "2",
+    "-N",
+    "50",
+    "-p",
+    "0.5",
+    "--secondary=yes",
+    "--secondary-seq",
+    "-Y",
+    "--eqx",
+    "--mask-len",
+    "75",
+    "--no-long-join",
+    "-r",
+    "100,200"
+  ],
+  "modification_endpoints": {
+    "OI": {
+      "cytosine_context": "all",
+      "modifications": [
+        "5mC",
+        "5hmC",
+        "6mA"
+      ]
+    },
+    "SETUN": {
+      "cytosine_context": "cpg",
+      "modifications": [
+        "5mC",
+        "5hmC"
+      ]
+    },
+    "ml_cutoff": 205,
+    "site_selection": "Intersection across all compared reads within each orientation",
+    "orientation_weighting": "equal",
+    "minimum_reads_per_state_per_eligible_orientation": 1,
+    "minimum_shared_positions_per_eligible_orientation": 1
+  },
+  "statistics": {
+    "unit": "whole read within orientation",
+    "tail": "absolute two-sided including ties",
+    "method": "exact integer-count distribution with combinatorial multiplicities",
+    "BH_family_size": 383,
+    "BH_method": "scipy.stats.false_discovery_control(method=bh)",
+    "significance": "q < 0.05",
+    "effect_unit": "percentage points, P minus L or R"
+  },
+  "source_sha256": {
+    "archived_rc1_config.py": "bfdfd15ab6f0fe19c09840d1eeda55357766a274e48e3ff828c4d76c44b6ccb5",
+    "historical_SETUN_config_indexed_final.json": "cf218b6db9b2c9cf4dec7c6e6617708111eb647cfa0edd5b187d9949a5ca0a2a",
+    "manuscript_snapshot.tex": "ef7ce3285868b2c76eb6cae9fd5e2e3d50ddc35dcf5e59e853d5ed10c12928df"
+  },
+  "release_compatibility": "--min-discovery-reads 3 changes the discovery threshold only. rc2 has no documented CLI switch to disable boundary refinement; setting refined_breakpoint_hypotheses to 0 is rejected. Saved counts preserve the historical statistical family without rerunning discovery."
+}

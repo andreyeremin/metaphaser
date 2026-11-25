@@ -13,7 +13,7 @@ metaphaser получает сборку в FASTA и исходные наноп
 например через WSL2.
 
 ```bash
-git clone --branch v0.2.0rc2 https://github.com/andreyeremin/metaphaser.git
+git clone --branch v0.2.0rc3 https://github.com/andreyeremin/metaphaser.git
 cd metaphaser
 conda env create -f environment.yml
 conda activate metaphaser
@@ -165,3 +165,32 @@ metaphaser adjust \
 
 Подробности метода и ограничения: [README](README.md),
 [проверки версии](docs/VALIDATION.md), [устранение проблем](docs/TROUBLESHOOTING.md).
+
+## Воспроизведение результатов статьи
+
+[Пакет 383 основных сравнений](study/383/README.md) содержит сохранённые
+производные таблицы, точную команду пересчёта p-value и общей поправки BH,
+контрольные суммы и результаты проверки. Сборка, modBAM и GPU для этого
+пересчёта не нужны. [Исторические настройки](docs/STUDY_REPRODUCTION.md)
+отдельно сопоставлены с параметрами по умолчанию rc2: повторный поиск
+интервалов в rc2 не гарантирует восстановления исходного семейства.
+Код имеет лицензию MIT; для таблиц сохранён
+[отдельный статус лицензирования](study/383/LICENSE.md).
+
+## Проверка частичного покрытия
+
+В версии 0.2.0rc3 команда `metaphaser partial-coverage` использует сохранённый
+`modifications/site_calls.tsv.gz`. Она не обращается к BAM, не выполняет
+выравнивание и не использует GPU. Это отдельный исследовательский анализ,
+который не заменяет основное сравнение на общих позициях.
+
+```bash
+metaphaser partial-coverage \
+  --site-calls RUN/modifications/site_calls.tsv.gz \
+  --sample SAMPLE --locus LOCUS --modification 5mC --contrast P-R \
+  --output partial_coverage.json
+```
+
+Укажите новое имя выходного файла. В отчёте находятся точный p-value,
+числа ридов и позиций, а также различия покрытия между состояниями.
+[Описание метода и ограничений](docs/PARTIAL_COVERAGE.md).
